@@ -156,18 +156,28 @@ const projectsData: WebProject[] = [
     iframeBlocked: false
   },
   {
-    id: 'this-is-it-cafe',
-    name: 'This Is It Cafe',
-    category: 'Restaurant Website',
-    liveUrl: 'https://this-is-it-cafe-website.vercel.app/',
-    githubUrl: 'https://github.com/',
-    description: "A stylish café website with modern branding, cinematic visuals, interactive menu sections, reservation experience, elegant typography, and immersive scrolling.",
-    techStack: ['Next.js', 'React', 'Tailwind CSS', 'GSAP', 'Framer Motion'],
-    features: ['Interactive Menu', 'Reservation CTA', 'Premium Animations', 'Responsive Design', 'Smooth Scroll', 'Gallery', 'SEO Optimized'],
-    challenge: "Designing a trendy, young cafe UI that encourages quick food orders and weekend dinner reservations, keeping mobile-first booking at the forefront.",
-    solution: "Crafted a gorgeous neon dark mode aesthetic with bold sans-serif headers, an interactive swipeable menu drawer, and direct integrations with maps and forms, wrapped in liquid Framer Motion transition hooks.",
-    iframeBlocked: false
+  id: 'voice-forge',
+  name: 'VoiceForge',
+  category: 'Assistive AI & Web Application',
+  liveUrl: 'https://voice-forge-client.vercel.app/',
+  githubUrl: 'https://github.com/itzzavdhesh/VoiceForge',
+  description: "An open-source assistive communication platform empowering deaf and speech-impaired individuals to lead video calls naturally through instant voice cloning, real-time predictive text-to-speech, and lip-synced facial canvas streaming via virtual camera.",
+  techStack: ['React', 'Vite', 'Tailwind CSS', 'Node.js', 'Express', 'ElevenLabs API', 'ONNX Runtime Web', 'WebRTC', 'IndexedDB'],
+  features: [
+    'Instant Voice Cloning',
+    'Real-Time Text-to-Speech',
+    'Lip-Synced Video Output',
+    'Virtual Camera Stream',
+    'Local-First Privacy',
+    'Quick Replies & History',
+    'P2P Profile Transfer',
+    'Mobile & Desktop Responsive'
+  ],
+  challenge: "Enabling real-time, low-latency speech synthesis and synchronized facial animation directly inside browser video calls without exposing user voice prints or sensitive audio data to central cloud databases.",
+  solution: "Engineered a privacy-first, local-first architecture combining client-side IndexedDB profile persistence, browser-based ONNX Runtime Web for real-time lip synchronization, and WebRTC canvas streaming to route live video output into Zoom, Google Meet, and Microsoft Teams via Virtual Camera.",
+  iframeBlocked: false
   },
+
   {
     id: 'noir-bean',
     name: 'Noir Bean',
