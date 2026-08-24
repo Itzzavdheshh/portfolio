@@ -23,12 +23,7 @@ export const BrowserFrame: React.FC<BrowserFrameProps> = ({
   
   // Auto-fetch favicon using a Google/Horse service
   const faviconUrl = `https://www.google.com/s2/favicons?sz=64&domain=${hostname}`;
-  // Auto-generate high-quality screenshot via microlink.io (apply wait parameters ONLY to NEXORA)
-  const screenshotUrl = fallbackImage || (
-    url.includes('nexora')
-      ? `https://api.microlink.io/?url=${encodeURIComponent(url)}&screenshot=true&embed=screenshot.url&waitUntil=networkidle0&waitForTimeout=500`
-      : `https://api.microlink.io/?url=${encodeURIComponent(url)}&screenshot=true&embed=screenshot.url`
-  );
+  const screenshotUrl = fallbackImage || `https://api.microlink.io/?url=${encodeURIComponent(url)}&screenshot=true&embed=screenshot.url&waitUntil=networkidle0&waitForTimeout=500`;
 
   useEffect(() => {
     setIsLoading(true);

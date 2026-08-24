@@ -121,17 +121,26 @@ const projectsData: WebProject[] = [
     iframeBlocked: false
   },
   {
-    id: 'la-vie-en-rose',
-    name: 'La Vie En Rose Cafe',
-    category: 'Restaurant Website',
-    liveUrl: 'https://la-vie-en-rose-cafe-website.vercel.app/',
-    githubUrl: 'https://github.com/', // Mock / placeholder github
-    description: "A premium luxury café website featuring elegant UI, immersive scrolling, cinematic sections, interactive food showcases, smooth animations, responsive layouts, and modern branding that captures the café's luxurious atmosphere.",
-    techStack: ['Next.js', 'React', 'Tailwind CSS', 'GSAP', 'Framer Motion'],
-    features: ['Premium UI', 'Smooth Scroll', 'Animated Sections', 'Menu Showcase', 'Gallery', 'Mobile Responsive', 'SEO Optimized'],
-    challenge: "Creating an online branding presence that accurately mirrors the tactile, luxurious experience of a physical upscale Parisian cafe, while maintaining top-tier load times for high-res food showcases.",
-    solution: "Leveraged Next.js Server Components for instant initial paint, combined with custom-tuned GSAP scroll triggers and Framer Motion micro-interactions that slowly reveal typography and cafe photography with luxurious damping.",
-    iframeBlocked: false
+  id: 'maison-de-rose-luxury-cafe',
+  name: 'Maison De Rose Luxury Cafe',
+  category: 'Restaurant & Event Platform',
+  liveUrl: 'https://maison-de-rose-luxury-cafe-snowy.vercel.app/',
+  githubUrl: 'https://github.com/Itzzavdheshh/maison-de-rose-luxury-cafe',
+  description: "A state-of-the-art, editorial luxury web application engineered for a high-end Parisian floral bistro and celebration venue. Features interactive event configurators, automated WhatsApp reservations, particle physics, GSAP lighting effects, and an admin lead management console.",
+  techStack: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'GSAP', 'Framer Motion', 'Lenis'],
+  features: [
+    'Interactive Celebration Configurator',
+    'Instant WhatsApp Booking Pipeline',
+    'Admin Lead Management Dashboard',
+    'Falling Rose Petals Canvas Physics',
+    'GSAP Cursor Spotlight',
+    'Lenis Kinetic Smooth Scroll',
+    'Gastronomy Suite & Item Favoriting',
+    'SEO & JSON-LD Schema Architecture'
+  ],
+  challenge: "Translating the opulent, sensory experience of an upscale Parisian floral café into a modern digital platform while managing heavy visual FX—such as falling petal particle physics, dynamic lighting, and smooth scrolling—without compromising load performance or responsiveness.",
+  solution: "Utilized Next.js App Router for high-performance server rendering and quick initial load times, integrated Lenis for inertia-based smooth scrolling, built custom HTML5 Canvas particle systems for rose petal dynamics, and connected an interactive celebration configurator directly to WhatsApp and an authenticated admin lead tracker.",
+  iframeBlocked: false
   },
   {
     id: 'mgr-constructions',
@@ -197,10 +206,7 @@ const projectsData: WebProject[] = [
 export const FeaturedProjectsSection: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<WebProject | null>(null);
   const getScreenshotUrl = (url: string) => {
-    if (url.includes('nexora')) {
-      return `https://api.microlink.io/?url=${encodeURIComponent(url)}&screenshot=true&embed=screenshot.url&waitUntil=networkidle0&waitForTimeout=500`;
-    }
-    return `https://api.microlink.io/?url=${encodeURIComponent(url)}&screenshot=true&embed=screenshot.url`;
+    return `https://api.microlink.io/?url=${encodeURIComponent(url)}&screenshot=true&embed=screenshot.url&waitUntil=networkidle0&waitForTimeout=500`;
   };
 
   return (
