@@ -143,18 +143,39 @@ const projectsData: WebProject[] = [
   iframeBlocked: false
   },
   {
-    id: 'mgr-constructions',
-    name: 'MGR Constructions',
-    category: 'Construction Company Website',
-    liveUrl: 'https://mgr-constructions.vercel.app/',
-    githubUrl: 'https://github.com/',
-    description: "A modern construction company website designed to establish trust through bold layouts, premium visuals, project showcases, service pages, and lead-generation-focused design.",
-    techStack: ['Next.js', 'React', 'Tailwind CSS', 'GSAP'],
-    features: ['Hero Animation', 'Service Showcase', 'Project Gallery', 'Contact Form', 'Responsive Design', 'Modern UI', 'Performance Optimized'],
-    challenge: "Conveying structural reliability, massive project sizes, and engineering scale through a web layout, ensuring client credentials stand out to commercial bidders.",
-    solution: "Designed a bold grid-based interface with wide full-bleed project sections, heavy typography, and subtle sliding block entries (representing construction building blocks) optimized with GSAP animations.",
-    iframeBlocked: false
+  id: 'resite',
+  name: 'REsite',
+  category: 'Luxury Real Estate & Web Application',
+  liveUrl: 'https://resite-blue.vercel.app/',
+  githubUrl: 'https://github.com/Itzzavdheshh/resite.git',
+  description: "A high-performance luxury real estate web application engineered for premium property showcases, interactive site tour bookings, instant construction cost calculation, and high-converting lead routing.",
+  techStack: [
+    'Next.js 16',
+    'React 19',
+    'TypeScript',
+    'Tailwind CSS v4',
+    'GSAP',
+    'Framer Motion',
+    'Lenis Smooth Scroll',
+    'React Hook Form',
+    'Zod',
+    'Cloudflare Turnstile'
+  ],
+  features: [
+    'Interactive Hero & Floating Parallax',
+    'VIP Site Visit Scheduler & Cab Request',
+    'Instant Construction Cost Estimator',
+    'Vastu-Compliant Property Showcase',
+    'Lead Routing & Rate-Limited API',
+    'Cloudflare Turnstile Bot Protection',
+    'Interactive Hyper-Connected Map',
+    'Fully Responsive Glassmorphic UI'
+  ],
+  challenge: "Creating an ultra-luxurious, cinematic real estate experience with fluid GSAP scroll animations and dynamic floating centerpieces while maintaining top-tier load performance, strict TypeScript type safety, and bot-protected lead dispatching.",
+  solution: "Architected a modern Next.js 16 (App Router) application leveraging React 19, Framer Motion, and GSAP ScrollTrigger for hardware-accelerated animations, paired with serverless API routes featuring IP rate-limiting, honeypot traps, and Cloudflare Turnstile human verification.",
+  iframeBlocked: false
   },
+
   {
   id: 'voice-forge',
   name: 'VoiceForge',

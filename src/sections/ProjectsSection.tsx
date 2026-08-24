@@ -12,33 +12,62 @@ interface StackingCard {
   img3: string;
 }
 
+const getScreenshotUrl = (url: string, type: 'desktop' | 'mobile' | 'wide') => {
+  const baseUrl = `https://api.microlink.io/?url=${encodeURIComponent(url)}&screenshot=true&embed=screenshot.url&waitUntil=networkidle0&waitForTimeout=500`;
+  if (type === 'mobile') {
+    return `${baseUrl}&viewport.width=375&viewport.height=812`;
+  }
+  if (type === 'wide') {
+    return `${baseUrl}&viewport.width=1440&viewport.height=900`;
+  }
+  return baseUrl;
+};
+
 const projects: StackingCard[] = [
   {
     num: '01',
-    category: 'CLIENT',
-    name: 'Nextlevel Studio',
-    liveUrl: '#',
-    img1: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055344_5eff02e0-87a5-41ce-b64f-eb08da8f33db.png&w=1280&q=85',
-    img2: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055431_11d841fd-8b41-46a5-82e4-b04f2407a7d8.png&w=1280&q=85',
-    img3: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055451_e317bf2d-28d4-48cc-86b0-6f72f25b6327.png&w=1280&q=85',
+    category: 'EdTech / SaaS Platform',
+    name: 'NEXORA',
+    liveUrl: 'https://nexora-avdhesh.vercel.app/',
+    img1: getScreenshotUrl('https://nexora-avdhesh.vercel.app/', 'desktop'),
+    img2: getScreenshotUrl('https://nexora-avdhesh.vercel.app/', 'mobile'),
+    img3: getScreenshotUrl('https://nexora-avdhesh.vercel.app/', 'wide'),
   },
   {
     num: '02',
-    category: 'PERSONAL',
-    name: 'Aura Brand Identity',
-    liveUrl: '#',
-    img1: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055654_911201c5-36d9-4bc6-bac7-331adfce159f.png&w=1280&q=85',
-    img2: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055723_5ceda0b8-d9c2-4665-b2e3-83ba19ba76d1.png&w=1280&q=85',
-    img3: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055753_adc5dcbd-a8e6-49c0-b43a-9b030d835cea.png&w=1280&q=85',
+    category: 'Assistive AI Platform',
+    name: 'VoiceForge',
+    liveUrl: 'https://voice-forge-client.vercel.app/',
+    img1: getScreenshotUrl('https://voice-forge-client.vercel.app/', 'desktop'),
+    img2: getScreenshotUrl('https://voice-forge-client.vercel.app/', 'mobile'),
+    img3: getScreenshotUrl('https://voice-forge-client.vercel.app/', 'wide'),
   },
   {
     num: '03',
-    category: 'CLIENT',
-    name: 'Solaris Digital',
-    liveUrl: '#',
-    img1: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055759_963cfb0b-4bd1-4b0f-9d0a-09bd6cf95b2f.png&w=1280&q=85',
-    img2: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_060108_438f781a-9846-4dcc-89ab-c4e6cb830f5b.png&w=1280&q=85',
-    img3: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055818_9d062121-ad7e-46b9-999a-1a6a692ef1ee.png&w=1280&q=85',
+    category: 'Full-Stack Restaurant App',
+    name: 'Noir Bean',
+    liveUrl: 'https://noir-bean-delta.vercel.app/',
+    img1: getScreenshotUrl('https://noir-bean-delta.vercel.app/', 'desktop'),
+    img2: getScreenshotUrl('https://noir-bean-delta.vercel.app/', 'mobile'),
+    img3: getScreenshotUrl('https://noir-bean-delta.vercel.app/', 'wide'),
+  },
+  {
+    num: '04',
+    category: 'Luxury Real Estate App',
+    name: 'REsite',
+    liveUrl: 'https://resite-blue.vercel.app/',
+    img1: getScreenshotUrl('https://resite-blue.vercel.app/', 'desktop'),
+    img2: getScreenshotUrl('https://resite-blue.vercel.app/', 'mobile'),
+    img3: getScreenshotUrl('https://resite-blue.vercel.app/', 'wide'),
+  },
+  {
+    num: '05',
+    category: 'Restaurant & Event Platform',
+    name: 'Maison De Rose Luxury Cafe',
+    liveUrl: 'https://maison-de-rose-luxury-cafe-snowy.vercel.app/',
+    img1: getScreenshotUrl('https://maison-de-rose-luxury-cafe-snowy.vercel.app/', 'desktop'),
+    img2: getScreenshotUrl('https://maison-de-rose-luxury-cafe-snowy.vercel.app/', 'mobile'),
+    img3: getScreenshotUrl('https://maison-de-rose-luxury-cafe-snowy.vercel.app/', 'wide'),
   },
 ];
 
@@ -50,27 +79,26 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ card, index }) => {
   return (
     <div
-      className="h-screen w-full sticky flex items-center justify-center px-5 sm:px-8 md:px-10 pointer-events-none"
+      className="h-screen w-full sticky flex items-start justify-center px-4 sm:px-8 md:px-10 pointer-events-none"
       style={{
-        top: `calc(8vh + ${index * 24}px)`,
+        top: `calc(75px + ${index * 32}px)`,
         zIndex: index + 1,
       }}
     >
       <div
-        className="w-full max-w-5xl rounded-[40px] sm:rounded-[50px] md:rounded-[60px] border-2 border-[#D7E2EA] bg-[#0C0C0C] p-5 sm:p-7 md:p-9 flex flex-col justify-between shadow-[0_-15px_35px_rgba(0,0,0,0.85)] overflow-hidden pointer-events-auto transition-transform"
-        style={{ height: '72vh' }}
+        className="w-full max-w-5xl rounded-[28px] sm:rounded-[36px] md:rounded-[44px] border-2 border-[#D7E2EA] bg-[#0C0C0C] p-4 sm:p-5 md:p-7 flex flex-col justify-between shadow-[0_-15px_35px_rgba(0,0,0,0.95)] overflow-hidden pointer-events-auto transition-transform h-[68vh] min-h-[440px] max-h-[640px]"
       >
         {/* ── Top Row: Number, Category, Name & Live Project Button ── */}
-        <div className="flex justify-between items-center w-full mb-4 sm:mb-6">
-          <div className="flex items-center space-x-4 sm:space-x-6">
-            <div className="text-4xl sm:text-6xl md:text-7xl font-black text-[#D7E2EA] select-none leading-none font-mono">
+        <div className="flex justify-between items-center w-full mb-3 sm:mb-4 shrink-0">
+          <div className="flex items-center space-x-3 sm:space-x-5">
+            <div className="text-3xl sm:text-4xl md:text-5xl font-black text-[#D7E2EA] select-none leading-none font-mono">
               {card.num}
             </div>
             <div>
-              <span className="text-[11px] sm:text-xs font-mono uppercase tracking-widest text-[#D7E2EA]/60 font-semibold block mb-1">
+              <span className="text-[10px] sm:text-xs font-mono uppercase tracking-widest text-[#D7E2EA]/60 font-semibold block mb-0.5 sm:mb-1">
                 {card.category}
               </span>
-              <h3 className="text-lg sm:text-2xl md:text-3xl font-bold uppercase text-white tracking-wide">
+              <h3 className="text-base sm:text-xl md:text-2xl font-bold uppercase text-white tracking-wide">
                 {card.name}
               </h3>
             </div>
@@ -81,10 +109,10 @@ const Card: React.FC<CardProps> = ({ card, index }) => {
         </div>
 
         {/* ── Bottom Row: Two-Column Image Grid ── */}
-        <div className="grid grid-cols-10 gap-3 sm:gap-5 flex-1 min-h-0 overflow-hidden w-full">
-          {/* Left Column (40% width / 4 cols): 2 stacked images with rounded corners */}
-          <div className="col-span-4 flex flex-col gap-3 sm:gap-5 h-full">
-            <div className="w-full overflow-hidden rounded-[20px] sm:rounded-[30px] md:rounded-[40px] border border-[#2d2d34] flex-1 bg-[#151518]">
+        <div className="grid grid-cols-12 gap-3 sm:gap-4 md:gap-5 flex-1 min-h-0 overflow-hidden w-full">
+          {/* Left Column (5 cols): 2 stacked images with rounded corners */}
+          <div className="col-span-5 flex flex-col gap-3 sm:gap-4 md:gap-5 h-full min-h-0">
+            <div className="w-full overflow-hidden rounded-[16px] sm:rounded-[22px] md:rounded-[28px] border border-[#2d2d34] flex-1 min-h-0 bg-[#151518]">
               <img
                 src={card.img1}
                 alt={`${card.name} preview 1`}
@@ -92,10 +120,7 @@ const Card: React.FC<CardProps> = ({ card, index }) => {
                 loading="lazy"
               />
             </div>
-            <div
-              className="w-full overflow-hidden rounded-[20px] sm:rounded-[30px] md:rounded-[40px] border border-[#2d2d34] bg-[#151518]"
-              style={{ flex: '1.3' }}
-            >
+            <div className="w-full overflow-hidden rounded-[16px] sm:rounded-[22px] md:rounded-[28px] border border-[#2d2d34] flex-1 min-h-0 bg-[#151518]">
               <img
                 src={card.img2}
                 alt={`${card.name} preview 2`}
@@ -105,8 +130,8 @@ const Card: React.FC<CardProps> = ({ card, index }) => {
             </div>
           </div>
 
-          {/* Right Column (60% width / 6 cols): 1 large image with rounded corners */}
-          <div className="col-span-6 h-full overflow-hidden rounded-[20px] sm:rounded-[30px] md:rounded-[40px] border border-[#2d2d34] bg-[#151518]">
+          {/* Right Column (7 cols): 1 large image with rounded corners */}
+          <div className="col-span-7 h-full min-h-0 overflow-hidden rounded-[16px] sm:rounded-[22px] md:rounded-[28px] border border-[#2d2d34] bg-[#151518]">
             <img
               src={card.img3}
               alt={`${card.name} hero mockup`}
